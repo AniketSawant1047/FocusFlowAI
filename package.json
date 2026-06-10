@@ -1,4 +1,5 @@
 {
+  "homepage": "git@github.com:AniketSawant1047/FocusFlowAI.git",
   "name": "focusflowai",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "ff-page -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
