@@ -10,15 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - name: Checkout Repo
+        uses: actions/checkout@v5
 
       - name: Setup Node JS
         uses: actions/setup-node@v5
         with:
           node-version: 22.x
+          cache: 'npm'
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build React App
         run: npm run build
+
+      - name: Upload Build on Artifacts
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: build-app
+          path: out/
+          
